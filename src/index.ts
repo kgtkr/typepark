@@ -27,3 +27,8 @@ export type Group<N extends number, T extends any[], R1 extends any[]=[], R2 ext
   1: Group<N, T, [], Cons<Reverse<R1>, R2>>,
   2: Group<N, Tail<T>, Cons<Head<T>, R1>, R2>
 }[T extends [] ? R1 extends [] ? 0 : 1 : (R1["length"] extends N ? 1 : 2)];
+export type Drop<N extends number, T extends any[], R extends any[]=[]> = {
+  0: T,
+  1: Drop<N, Tail<T>, Cons<Head<T>, R>>
+}[T extends [] ? 0 : R["length"] extends N ? 0 : 1];
+
