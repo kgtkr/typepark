@@ -1,0 +1,22 @@
+{
+  "name": "typelevel-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgtkr/typelevel-list.git"
+  },
+  "author": "kgtkr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kgtkr/typelevel-list/issues"
+  },
+  "homepage": "https://github.com/kgtkr/typelevel-list#readme",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
+}
