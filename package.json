@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kgtkr/typelevel-list#readme",
   "devDependencies": {
-    "typescript": "^3.0.3"
+    "typescript": "^3.1.0-dev.20180906"
   }
 }
