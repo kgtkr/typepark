@@ -36,3 +36,7 @@ export type Flat<T extends any[][], R1 extends any[]=[], R2 extends any[]=[]> = 
   1: Flat<Tail<T>, Head<T, []>, R2>,
   2: Flat<T, Tail<R1>, Cons<Head<R1>, R2>>
 }[T extends [] ? R1 extends [] ? 0 : 2 : (R1 extends [] ? 1 : 2)];
+export type Repeat<T, N extends number, R extends any[]=[]> = {
+  0: R,
+  1: Repeat<T, N, Cons<T, R>>
+}[R["length"] extends N ? 0 : 1];
