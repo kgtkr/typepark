@@ -13,4 +13,4 @@ type Pipe<T extends any[]> = _Pipe<Cast<ShiftZip<T>, any[], []>>;
 
 type Cast<T, P, D> = T extends P ? T : D;
 
-type PipeFunc<T extends [any, any, ...any[]]> = (...f: Cast<Pipe<T>, any[], []>) => ((x: Head<T>) => Last<T>);
+export type PipeFunc<T extends [any, any, ...any[]]> = (...f: Cast<Pipe<T>, any[], []>) => ((x: Head<T>) => Last<T>);
