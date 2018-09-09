@@ -1,4 +1,5 @@
 import { Zip, Tail, Head, Reverse, Cons, Last } from "./list";
+import { Cast } from "./util";
 
 type ShiftZip<T extends any[]> = Zip<T, Tail<T>>;
 
@@ -9,8 +10,6 @@ type _Pipe<T extends any[], R extends any[]=[]> = {
   1: _Pipe<Tail<T>, Cons<Tuple2Fn<Head<T>>, R>>
 }[T extends [] ? 0 : 1];
 
-type Pipe<T extends any[]> = _Pipe<Cast<ShiftZip<T>, any[], []>>;
-
-type Cast<T, P, D> = T extends P ? T : D;
-
-export type PipeFunc<T extends [any, any, ...any[]]> = (...f: Cast<Pipe<T>, any[], []>) => ((x: Head<T>) => Last<T>);
+export type PipeParams<T extends [any, any, ...any[]]> = Cast<_Pipe<Cast<ShiftZip<T>, any[], []>>, any[], []>;
+export type PipeResult<T extends [any, any, ...any[]]> = (x: Head<T>) => Last<T>;
+export type Pipe<T extends [any, any, ...any[]]> = (...f: PipeParams<T>) => PipeResult<T>;
