@@ -5,57 +5,9 @@
 $ npm i typepark typescript@next
 ```
 
-## Usage
+## Future
+* [tuple operation](https://github.com/kgtkr/typepark/blob/master/src/last.spec.ts)
+* [testing](https://github.com/kgtkr/typepark/blob/master/src/test.spec.ts)
+* [logical](https://github.com/kgtkr/typepark/blob/master/src/logical.spec.ts)
+* [pipeline](https://github.com/kgtkr/typepark/blob/master/src/pipe.spec.ts)
 
-### Head
-
-* `Head<[1,2,3]>`→`1`
-* `Head<[],1>`→`1`
-
-### Tail
-
-* `Tail<[1,2,3]>`→`[2,3]`
-
-### Last
-
-* `Last<[1,2,3]>`→`3`
-
-### Cons
-
-* `Cons<1,[2,3]>`→`[1,2,3]`
-
-### Reverse
-
-* `Reverse<[1,2,3]>`→`[3,2,1]`
-
-### Concat
-
-* `Concat<[1,2,3],[4,5,6]>`→`[1,2,3,4,5,6]`
-
-### Zip
-
-* `Zip<[1,2,3],[4,5]>`→`[[1,4],[2,5]]`
-
-### Take
-
-* `Take<2,[1,2,3]>`→`[1,2]`
-
-### Group
-
-* `Group<2,[1,2,3,4,5]>`→`[[1,2],[3,4],[5]]`
-
-### Drop
-
-* `Drop<[1,2,3]>`→`[2,3]`
-
-### Flat
-
-* `Flat<[[1,2],[],[3]]>`→`[1,2,3]`
-
-### Repeat
-
-* `Repeat<1,5>`→`[1,1,1,1,1]`
-
-### Pipe
-
-* `Pipe<[1,2,3,4]>`→`(1->2)->(2->3)->(3->4)->(1->4)`
