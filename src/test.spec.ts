@@ -1,4 +1,4 @@
-import { TypeEq, assertType } from "./test";
+import { TypeEq, assertType, assertNotType } from "./test";
 
 assertType<TypeEq<TypeEq<1, 1>, true>>();
 
@@ -27,3 +27,5 @@ assertType<TypeEq<TypeEq<1, unknown>, false>>();
 assertType<TypeEq<TypeEq<unknown, 1>, false>>();
 
 assertType<TypeEq<TypeEq<unknown, unknown>, true>>();
+
+assertNotType<false>();
