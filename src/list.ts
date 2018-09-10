@@ -1,7 +1,7 @@
 export type Head<T extends any[], D=never> = T extends [infer X, ...any[]] ? X : D;
 export type Tail<T extends any[]> = ((...x: T) => void) extends ((x: any, ...xs: infer XS) => void) ? XS : never
-export type Last<T extends any[]> = {
-  0: never,
+export type Last<T extends any[], D=never> = {
+  0: D,
   1: Head<T>,
   2: Last<Tail<T>>,
 }[T extends [] ? 0 : T extends [any] ? 1 : 2];
