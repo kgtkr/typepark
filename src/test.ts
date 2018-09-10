@@ -9,3 +9,4 @@ type IsNotAny<T> = Not<IsAny<T>>;
 export type TypeEq<A, B> = Or<And<IsAny<A>, IsAny<B>>, And<And<IsNotAny<A>, IsNotAny<B>>, TypeEqNotAny<A, B>>>;
 
 export function assertType<_T extends true>() { }
+export function assertNotType<_T extends false>() { }
