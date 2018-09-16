@@ -3,6 +3,9 @@
     "target": "es5",
     "module": "commonjs",
     "noEmit": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "lib": [
+      "es2015"
+    ]
   }
 }
