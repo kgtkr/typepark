@@ -1,1 +1,1 @@
-export type Cast<T, P, D> = T extends P ? T : D;
+export type Cast<T, P, D=P> = T extends P ? T : D;
