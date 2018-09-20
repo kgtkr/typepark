@@ -8,7 +8,7 @@ $ npm i typepark typescript@next
 ```
 
 ## Feature
-* [tuple operation](https://github.com/kgtkr/typepark/blob/master/src/last.spec.ts)
+* [tuple operation](https://github.com/kgtkr/typepark/blob/master/src/list.spec.ts)
 * [testing](https://github.com/kgtkr/typepark/blob/master/src/test.spec.ts)
 * [logical](https://github.com/kgtkr/typepark/blob/master/src/logical.spec.ts)
 * [pipeline](https://github.com/kgtkr/typepark/blob/master/src/pipe.spec.ts)
