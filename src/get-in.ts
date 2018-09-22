@@ -1,4 +1,4 @@
-import { Concat, Tail, Head } from "./list";
+/*import { Concat, Tail, Head } from "./list";
 import { Cast } from "./util";
 
 type X = CursorEnum<Foo>;
@@ -27,3 +27,4 @@ interface Foo {
     x: string
   }
 }
+*/
