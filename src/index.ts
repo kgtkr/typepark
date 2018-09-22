@@ -4,3 +4,4 @@ export * from "./util";
 export * from "./test";
 export * from "./logical";
 export * from "./unvalue";
+export * from "./hkt";
