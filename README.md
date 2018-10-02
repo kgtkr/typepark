@@ -4,7 +4,7 @@
 ## Install
 
 ```
-$ npm i typepark typescript@next
+$ npm i typepark typescript@3.1
 ```
 
 ## Feature
