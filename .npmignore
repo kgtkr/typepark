@@ -1,0 +1,84 @@
+# Created by .ignore support plugin (hsz.mobi)
+### temp template
+/~*
+~ci.list.txt
+~ci.log.txt
+~ci.errors.txt
+
+*.stackdump
+*.bak
+*.old
+
+/*.log
+/*.lock
+
+*.tmp
+### test template
+*.spec.ts
+*.spec.js
+*.spec.js.map
+*.test.ts
+*.test.js
+*.test.js.map
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+### git_ts_bin template
+bin/*.d.ts
+### tsonly_test template
+test/*.js
+test/*.d.ts
+
+tests/*.js
+tests/*.d.ts
+
+__test__/*.js
+__test__/*.d.ts
+
+__tests__/*.js
+__tests__/*.d.ts
+### npm2 template
+
+
+
+tsconfig.json
+package-lock.json
+
+test
+
+.github
+.gitkeep
+
+/.*
+
+tests
+
+
+
+
+__test__
+__tests__
+
+/node_modules/
+**/node_modules/
+### jsonly template
+*.ts
+!*.d.ts
+
+### jsonly_bin template
+bin/*.ts
+
+*.spec.ts
+*.spec.d.ts
+
+/dist/
+/benchmark.md
+/docs/
+/test/
+
+

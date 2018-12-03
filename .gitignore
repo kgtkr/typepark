@@ -1,2 +1,11 @@
 /node_modules/
 /.vscode/
+
+
+*.spec.js
+*.spec.d.ts
+*.js
+
+/test/**/*.js
+!/test/**/*.d.ts
+/test/script/*.d.ts

@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "noEmit": true,
-    "rootDir": "src",
-    "lib": [
-      "es2015"
-    ]
+    "target": "esnext",
+    "module": "commonjs"
   }
 }

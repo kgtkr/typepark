@@ -1,0 +1,11 @@
+import { And, Not, Or } from "./logical";
+declare type IsExtends<A, B> = A extends B ? true : false;
+declare type TypeEqNotUnion<A, B> = And<IsExtends<A, B>, IsExtends<B, A>>;
+declare type ComparableType<T> = [T];
+declare type TypeEqNotAny<A, B> = TypeEqNotUnion<ComparableType<A>, ComparableType<B>>;
+declare type IsAny<T> = And<TypeEqNotAny<T, 1>, TypeEqNotAny<T, 2>>;
+declare type IsNotAny<T> = Not<IsAny<T>>;
+export declare type TypeEq<A, B> = Or<And<IsAny<A>, IsAny<B>>, And<And<IsNotAny<A>, IsNotAny<B>>, TypeEqNotAny<A, B>>>;
+export declare function assertType<_T extends true>(): void;
+export declare function assertNotType<_T extends false>(): void;
+export {};

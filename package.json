@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kgtkr/typepark#readme",
   "devDependencies": {
-    "typescript": "^3.1.1"
+    "typescript": "^3"
   }
 }
