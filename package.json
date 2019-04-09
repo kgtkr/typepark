@@ -1,6 +1,6 @@
 {
   "name": "typepark",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kgtkr/typepark#readme",
   "devDependencies": {
-    "typescript": "^3.1.1"
+    "typescript": "^3.4.2"
   }
 }
