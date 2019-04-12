@@ -11,7 +11,8 @@ import {
   Group,
   Drop,
   Flat,
-  Repeat
+  Repeat,
+  Range
 } from "./list";
 
 assertType<TypeEq<Head<[1]>, 1>>();
@@ -78,3 +79,6 @@ assertType<TypeEq<Flat<[[1, 2], [], [3, 4]]>, [1, 2, 3, 4]>>();
 assertType<TypeEq<Repeat<1, 0>, []>>();
 assertType<TypeEq<Repeat<1, 1>, [1]>>();
 assertType<TypeEq<Repeat<1, 5>, [1, 1, 1, 1, 1]>>();
+
+assertType<TypeEq<Range<0, 0>, [0]>>();
+assertType<TypeEq<Range<2, 5>, [2, 3, 4, 5]>>();
