@@ -1,21 +1,21 @@
 import { Concat, Tail, Head } from "./list";
 import { Cast } from "./util";
 
-type GetIn<T> = <K extends _CursorEnum<T>>(path: K) => CursorResult<T, Cast<K, any[]>>;
+export type ObjectAccessFunctionExample = <T, K extends ObjectAccessParam<T>>(path: K) => ObjectAccessResult<T, Cast<K, any[]>>;
 
-type Test = _CursorEnum<Foo>;
-type Y = CursorResult<Foo, ["foo", "x"]>;
+type Test = ObjectAccessParam<Foo>;
+type Y = ObjectAccessResult<Foo, ["foo", "x"]>;
 
-type _CursorEnum<T> = CursorEnum<T> extends infer X ? Cast<X, any[]> : never;
+export type ObjectAccessParam<T> = _ObjectAccessParam<T> extends infer X ? Cast<X, any[]> : never;
 
-type CursorEnum<T, R extends any[] = [], Key = keyof T> = {
-  0: R | (Key extends infer P ? CursorEnum<T[Cast<P, keyof T>], Concat<R, [P]> extends infer X ? Cast<X, any[]> : never> : never),
+type _ObjectAccessParam<T, R extends any[] = [], Key = keyof T> = {
+  0: R | (Key extends infer P ? _ObjectAccessParam<T[Cast<P, keyof T>], Concat<R, [P]> extends infer X ? Cast<X, any[]> : never> : never),
   1: R
 }[T extends object ? 0 : 1];
 
-type CursorResult<T, C extends any[]> = {
+export type ObjectAccessResult<T, C extends any[]> = {
   0: T,
-  1: CursorResult<T[Cast<Head<C>, keyof T>], Tail<C>>
+  1: ObjectAccessResult<T[Cast<Head<C>, keyof T>], Tail<C>>
 }[C extends [] ? 0 : 1];
 
 interface Foo {
