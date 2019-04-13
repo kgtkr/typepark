@@ -9,7 +9,7 @@ type Y = CursorResult<Foo, ["foo", "x"]>;
 type _CursorEnum<T> = CursorEnum<T> extends infer X ? Cast<X, any[]> : never;
 
 type CursorEnum<T, R extends any[] = [], Key = keyof T> = {
-  0: R | (Key extends infer P ? CursorEnum<T[Cast<P, keyof T>], Concat<R, [P]> extends infer X ? Cast<X, any[]> : X> : never),
+  0: R | (Key extends infer P ? CursorEnum<T[Cast<P, keyof T>], Concat<R, [P]> extends infer X ? Cast<X, any[]> : never> : never),
   1: R
 }[T extends object ? 0 : 1];
 
