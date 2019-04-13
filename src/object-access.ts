@@ -3,9 +3,6 @@ import { Cast } from "./util";
 
 export type ObjectAccessFunctionExample = <T, K extends ObjectAccessParam<T>>(path: K) => ObjectAccessResult<T, Cast<K, any[]>>;
 
-type Test = ObjectAccessParam<Foo>;
-type Y = ObjectAccessResult<Foo, ["foo", "x"]>;
-
 export type ObjectAccessParam<T> = _ObjectAccessParam<T> extends infer X ? Cast<X, any[]> : never;
 
 type _ObjectAccessParam<T, R extends any[] = [], Key = keyof T> = {
@@ -17,14 +14,3 @@ export type ObjectAccessResult<T, C extends any[]> = {
   0: T,
   1: ObjectAccessResult<T[Cast<Head<C>, keyof T>], Tail<C>>
 }[C extends [] ? 0 : 1];
-
-interface Foo {
-  foo: {
-    bar: {
-      baz: {
-        yay: number
-      }
-    },
-    x: string
-  }
-}
