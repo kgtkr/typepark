@@ -13,3 +13,5 @@ $ npm i typepark typescript@3.1
 * [logical](https://github.com/kgtkr/typepark/blob/master/src/logical.spec.ts)
 * [pipeline](https://github.com/kgtkr/typepark/blob/master/src/pipe.spec.ts)
 
+## Usage
+Look `./src/**/*.spec.ts`
