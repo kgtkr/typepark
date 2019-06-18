@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.env
+.DS_Store
+
+# Config
+.travis.yml
+tsconfig.json
+
+# Source code
+src/
+
+# Documentations
+docs/
